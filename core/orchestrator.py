@@ -310,7 +310,7 @@ def run_agent_pipeline(input_type: str, input_ref: str, db_path: Optional[str] =
             conn, sample_id, target_brand=primary_brand, dom_hash=dom_hash_val
         )
 
-        # Вердикт — в .md-артефакт (тот самый отчёт с хэшами, брендами и кампанией)
+        # Сохранение итогового Threat Intelligence отчета в markdown-артефакт
         verdict = analyst_result.get("result", "")
         if not verdict or "лимит шагов" in verdict or "Collector error" in verdict or "Analyst error" in verdict:
             sample_brands = storage.list_brands(conn, sample_id)

@@ -26,5 +26,9 @@ artifacts/
 *.tar.gz
 test_html/
 
+# Documentation
+docs/
+
 # Tooling & scratch
 .hermes/
+
